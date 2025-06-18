@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 0.8fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    'sidebar header'
+    'sidebar information';
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(0, 137, 190);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header{
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.information{
+    grid-area: information;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(221, 219, 219);
+    font-size: 0.9rem;
+    padding: 20px;
+    gap: 10px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card header{
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.ann-tre{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+#announcements header{
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold; 
+}
+
+#announcements>header, .trending header{
+    margin: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.announcement-items > div {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.announcement-items > div:last-child {
+    border-bottom: none;
+}
+
+.announcement-items header{
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.dashboard{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00e";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.navigation{
+    font-size: 1rem;
+    font-weight: light;
+    padding: 0 10px;
+    margin-top: 0;
+}
+
+.navigation>div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin-left: 20px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.navigation div:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.nav-home::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f015";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-profile::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-messages::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0e0";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-history::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1da";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-tasks::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0ae";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-communities::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c0";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-settings::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f013";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-support::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f059";
+    font-weight: 600;
+    margin-right: 5px;
+}
+.nav-privacy::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f5bd";
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.search-btn{
+    background-color: rgb(230, 230, 230);
+    border: 0;
+    border-radius: 20px;
+    width: 60%;
+    max-width: 400px;
+    height: 35px;
+    padding: 0 40px 0 15px;
+    font-size: 1rem;
+    
+}
+
+.search-icon-placeholder::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    font-weight: 900;
+    color: #555;
+    pointer-events: none;
+    margin-right: 10px;
+}
+
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.welcome-text h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.welcome-text p {
+    font-size: 1rem;
+    margin: 0;
+    color: #555;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li{
+    border-radius: 20px;
+    background-color: rgb(4, 4, 248);
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+li:hover{
+    background-color: rgb(0, 0, 190);
+}
+
+#profiles{
+    display: grid;
+    gap: 15px;
+}
+
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-card:last-child {
+    border-bottom: none;
+}
+
+.profile-card h5{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-card p{
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+}
+.announcement-items, #profiles{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

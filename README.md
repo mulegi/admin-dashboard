@@ -1,2 +1,2 @@
 # admin-dashboard
-This a project meant to primarily showcase positioning of elements on a webpage using Grid.
+This project is meant to primarily showcase the positioning of elements on a webpage using Grid.
